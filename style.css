@@ -12,15 +12,22 @@ body {
 }
 
 .top h1 {
-  color: #ff0055;
   margin: 0;
+  color: #ff0055;
+  letter-spacing: 2px;
+}
+
+.top p {
+  margin: 5px 0 0;
+  font-size: 13px;
+  color: #ccc;
 }
 
 .age-box {
+  background: #220000;
   text-align: center;
   font-size: 14px;
   padding: 10px;
-  background: #220000;
 }
 
 .grid {
@@ -45,6 +52,8 @@ body {
 }
 
 .card p {
+  margin: 0;
   padding: 8px;
   text-align: center;
+  font-size: 14px;
 }
