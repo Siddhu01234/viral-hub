@@ -1,0 +1,50 @@
+body {
+  margin: 0;
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.top {
+  text-align: center;
+  padding: 15px;
+  background: #111;
+}
+
+.top h1 {
+  color: #ff0055;
+  margin: 0;
+}
+
+.age-box {
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  background: #220000;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  padding: 12px;
+}
+
+.card {
+  background: #111;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card p {
+  padding: 8px;
+  text-align: center;
+}
