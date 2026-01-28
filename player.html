@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VIRALHUB Player</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    h2 {
+      padding: 12px;
+      color: #ff0055;
+    }
+    video {
+      width: 100%;
+      max-width: 480px;
+      height: auto;
+      border-radius: 12px;
+    }
+  </style>
+</head>
+<body>
+
+<h2>🔞 VIRALHUB PLAYER</h2>
+
+<video id="videoPlayer" controls autoplay playsinline></video>
+
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const videoUrl = params.get("v");
+
+  if (videoUrl) {
+    document.getElementById("videoPlayer").src = videoUrl;
+  } else {
+    document.body.innerHTML += "<p>Video not found</p>";
+  }
+</script>
+
+</body>
+</html>
