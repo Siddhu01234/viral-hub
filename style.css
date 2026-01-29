@@ -70,31 +70,25 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* HEADER */
 .site-header {
   position: sticky;
   top: 0;
   background: #000;
+  height: 56px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 12px;
-  padding: 12px;
-  border-bottom: 2px solid red;
   z-index: 1000;
+  border-bottom: 1px solid #222;
 }
 
+/* 🔥 LOGO FIX */
 .logo {
-  height: 22px;      /* mobile ke liye ideal */
+  max-height: 32px;
   width: auto;
+  max-width: 90%;
   object-fit: contain;
 }
 
 
 
-/* TITLE */
-.site-title {
-  font-size: 26px;
-  color: red;
-  font-weight: bold;
-}
