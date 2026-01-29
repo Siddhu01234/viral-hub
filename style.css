@@ -82,12 +82,18 @@ body {
   border-bottom: 1px solid #222;
 }
 
-/* 🔥 LOGO FIX */
+/* ===== FINAL LOGO SIZE (MOBILE + PC) ===== */
 .logo {
-  max-height: 32px;
+  height: 40px;
   width: auto;
   max-width: 90%;
   object-fit: contain;
+}
+
+@media (min-width: 768px) {
+  .logo {
+    height: 52px;
+  }
 }
 
 
