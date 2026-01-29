@@ -84,10 +84,13 @@ body {
   z-index: 1000;
 }
 
-/* LOGO */
-.logo {
-  height: 45px;
+@media (max-width: 600px) {
+  .logo {
+    height: 24px;
+    max-height: 24px;
+  }
 }
+
 
 /* TITLE */
 .site-title {
