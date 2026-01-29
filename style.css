@@ -90,11 +90,6 @@ body {
   object-fit: contain;
 }
 
-@media (min-width: 768px) {
-  .logo {
-    height: 52px;
-  }
-}
 
 
 
