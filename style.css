@@ -84,9 +84,9 @@ body {
 
 /* ===== FINAL LOGO SIZE (MOBILE + PC) ===== */
 .logo {
-  height: 300px;
+  height: 500px;
   width: auto;
-  max-width: 200%;
+  max-width: 500%;
   object-fit: contain;
 }
 
