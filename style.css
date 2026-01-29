@@ -83,18 +83,24 @@ body {
 }
 
 .logo {
-  width: 100%;       /* container ke hisaab se max width */
-  max-width: 400px;  /* desktop par max size */
-  height: auto;      /* aspect ratio maintain rahe */
-  display: block;
-  margin: 0 auto;    /* center align */
+  width: 80%;        /* container ka 80% le */
+  max-width: 600px;  /* desktop par max size */
+  height: auto;      /* aspect ratio maintain */
+  display: inline-block;
 }
 
-@media (max-width: 768px) {  /* tablet/mobile */
+@media (max-width: 1024px) {   /* tablet */
   .logo {
-    max-width: 250px;   /* mobile/tablet ke liye thoda chhota */
+    max-width: 400px;
   }
 }
+
+@media (max-width: 768px) {    /* mobile */
+  .logo {
+    max-width: 250px;
+  }
+}
+
 
 
 
