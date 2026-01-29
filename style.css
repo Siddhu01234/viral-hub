@@ -82,12 +82,15 @@ body {
   border-bottom: 1px solid #222;
 }
 
-/* ===== FINAL LOGO SIZE (MOBILE + PC) ===== */
 .logo {
-  height: 40px;
-  width: auto;
-  max-width: 90%;
-  object-fit: contain;
+  width: 150px;  /* default mobile size */
+  height: auto;
+}
+
+@media(min-width: 768px) {  /* tablet aur desktop */
+  .logo {
+    width: 250px;   /* bada size desktop par */
+  }
 }
 
 
