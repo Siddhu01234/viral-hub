@@ -70,26 +70,29 @@ body {
   font-family: Arial, sans-serif;
 }
 
-/* Header container */
+/* Header container fix */
 .site-header {
   width: 100%;
   text-align: center;
-  padding: 20px 0;     /* logo ke aas-paas space */
-  background: #000;    /* agar chahiye */
-  position: relative;  /* proper positioning */
-  z-index: 10;         /* content ke upar rahe */
+  padding: 10px 0;
+  background: #000;
+  position: sticky; /* Ise sticky karein taaki scroll karne par ye top par rahe */
+  top: 0;
+  z-index: 100;
+  border-bottom: 2px solid #222; /* Thoda separation dikhega */
 }
 
-/* Logo */
+/* Logo size fix */
 .logo {
-  width: 80%;           /* container ke hisaab se bada */
-  max-width: 400px;     /* desktop me max size */
-  height: auto;         /* aspect ratio maintain */
-  display: inline-block;
+  max-height: 80px; /* Logo ki height limit karein taaki screen na bhar jaye */
+  width: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-/* Content section */
+/* Content adjustment */
 .content {
-  margin-top: 20px;     /* logo ke niche space */
-  padding: 0 10px;
+  margin-top: 10px; /* Header ke turant baad thoda gap */
+  padding: 10px;
+  /* height: calc(100vh - ...) ko hata dein agar scroll natural chahiye */
 }
