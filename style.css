@@ -83,13 +83,16 @@ body {
 }
 
 .logo {
-  width: 150px;  /* default mobile size */
-  height: auto;
+  width: 100%;       /* container ke hisaab se max width */
+  max-width: 400px;  /* desktop par max size */
+  height: auto;      /* aspect ratio maintain rahe */
+  display: block;
+  margin: 0 auto;    /* center align */
 }
 
-@media(min-width: 768px) {  /* tablet aur desktop */
+@media (max-width: 768px) {  /* tablet/mobile */
   .logo {
-    width: 250px;   /* bada size desktop par */
+    max-width: 250px;   /* mobile/tablet ke liye thoda chhota */
   }
 }
 
