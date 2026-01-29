@@ -84,12 +84,12 @@ body {
   z-index: 1000;
 }
 
-@media (max-width: 600px) {
-  .logo {
-    height: 24px;
-    max-height: 24px;
-  }
+.logo {
+  height: 22px;      /* mobile ke liye ideal */
+  width: auto;
+  object-fit: contain;
 }
+
 
 
 /* TITLE */
