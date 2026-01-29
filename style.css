@@ -86,7 +86,7 @@ body {
 .logo {
   height: 40px;
   width: auto;
-  max-width: 90%;
+  max-width: 200%;
   object-fit: contain;
 }
 
