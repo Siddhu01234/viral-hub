@@ -60,5 +60,24 @@
   <p>© 2024 ViralHub - All Rights Reserved</p>
 </footer>
 
+<script>
+function searchContent() {
+  let input = document.getElementById("searchInput").value.toLowerCase();
+  let items = document.getElementsByClassName("card");
+
+  for (let i = 0; i < items.length; i++) {
+    let text = items[i].innerText.toLowerCase();
+    if (text.includes(input)) {
+      items[i].style.display = "";
+    } else {
+      items[i].style.display = "none";
+    }
+  }
+}
+</script>
+</body>
+</html>
+
+  
 </body>
 </html>
