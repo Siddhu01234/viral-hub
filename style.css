@@ -26,26 +26,6 @@ body {
   height: 40px;
 }
 
-/* HERO */
-.hero {
-  height: 60vh;
-  background: radial-gradient(circle at top, #1a1a1a, #000);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding-left: 50px;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 18px;
-  color: #ccc;
-}
-
 /* SEARCH */
 .netflix-search {
   margin: 30px auto;
