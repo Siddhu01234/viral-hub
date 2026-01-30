@@ -30,20 +30,22 @@ body {
 
 
 /* SEARCH */
-.netflix-search {
+.search-box {
+  width: 100%;
   display: flex;
   justify-content: center;
-  margin: 25px 0;
+  margin: 20px 0;
 }
 
-.netflix-search input {
+.search-box input {
   width: 60%;
   max-width: 520px;
   padding: 14px;
+  font-size: 16px;
   border-radius: 4px;
   border: none;
-  font-size: 16px;
 }
+
 
 
 .content {
