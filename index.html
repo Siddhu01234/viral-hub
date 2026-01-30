@@ -23,34 +23,10 @@
 </div>
 
 <div class="content">
-  <div class="grid">
-    <a class="card" href="https://res.cloudinary.com/djrsf9o6k/video/upload/v1769659676/video_2026-01-25_22-18-10_adcnl7.mp4">
-      <img src="thumbs/v1.jpg">
-      <p>fatima jatoi viral PART #1</p>
-    </a>
-
-    <a class="card" href="https://res.cloudinary.com/djrsf9o6k/video/upload/v1769660075/pakistan_marry_viral_htzkbj.mp4">
-      <img src="thumbs/v2.jpg">
-      <p>Pakistan marry full viral video</p>
-    </a>
-
-    <a class="card" href="https://res.cloudinary.com/djrsf9o6k/video/upload/v1769661494/2023-07-24-13-16-10_hhtmoh.mp4">
-      <img src="thumbs/v4.jpg">
-      <p>Bed pe lita kar sali ko choda</p>
-    </a>
-
-    <a class="card" href="https://res.cloudinary.com/djrsf9o6k/video/upload/v1769660476/2025-11-27-03-27-26_p9nl5a.mp4">
-      <img src="thumbs/v5.jpeg">
-      <p>yahan aao na utaar ke viral part #1</p>
-    </a>
-    
-    <a class="card" href="https://res.cloudinary.com/djrsf9o6k/video/upload/v1769662576/IMG_1724_kktdok.mov">
-      <img src="thumbs/v6.jpg">
-      <p>Fatima jatoi viral part #2</p>
-    </a>
-  </div>
+  <div class="grid"></div>
 </div>
 
+   
 <button id="loadMore">More</button>
 
   
@@ -63,66 +39,6 @@
   <p>© 2024 ViralHub - All Rights Reserved</p>
 </footer>
 
-<script>
-let cards = document.querySelectorAll(".card");
-let loadMoreBtn = document.getElementById("loadMore");
-let perPage = 10;
-let currentIndex = perPage;
 
-/* ---------- LOAD MORE ---------- */
-cards.forEach((card, index) => {
-  if (index >= perPage) card.style.display = "none";
-});
-
-if (cards.length <= perPage) {
-  loadMoreBtn.style.display = "none";
-}
-
-loadMoreBtn.addEventListener("click", () => {
-  let nextCards = Array.from(cards).slice(currentIndex, currentIndex + perPage);
-  nextCards.forEach(card => card.style.display = "block");
-  currentIndex += perPage;
-
-  if (currentIndex >= cards.length) {
-    loadMoreBtn.style.display = "none";
-  }
-});
-
-/* ---------- SEARCH ---------- */
-function searchContent() {
-  let input = document.getElementById("searchInput").value.toLowerCase();
-
-  let matchCount = 0;
-  cards.forEach(card => {
-    let text = card.innerText.toLowerCase();
-    if (text.includes(input)) {
-      card.style.display = "block";
-      matchCount++;
-    } else {
-      card.style.display = "none";
-    }
-  });
-
-  // search ke time "More" button hide
-  loadMoreBtn.style.display = input ? "none" : "block";
-
-  // search clear hone par reset
-  if (!input) {
-    currentIndex = perPage;
-    cards.forEach((card, index) => {
-      card.style.display = index < perPage ? "block" : "none";
-    });
-
-    if (cards.length <= perPage) {
-      loadMoreBtn.style.display = "none";
-    }
-  }
-}
-</script>
-
-</body>
-</html>
-
-  
 </body>
 </html>
