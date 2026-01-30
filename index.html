@@ -64,20 +64,62 @@
 </footer>
 
 <script>
+let cards = document.querySelectorAll(".card");
+let loadMoreBtn = document.getElementById("loadMore");
+let perPage = 10;
+let currentIndex = perPage;
+
+/* ---------- LOAD MORE ---------- */
+cards.forEach((card, index) => {
+  if (index >= perPage) card.style.display = "none";
+});
+
+if (cards.length <= perPage) {
+  loadMoreBtn.style.display = "none";
+}
+
+loadMoreBtn.addEventListener("click", () => {
+  let nextCards = Array.from(cards).slice(currentIndex, currentIndex + perPage);
+  nextCards.forEach(card => card.style.display = "block");
+  currentIndex += perPage;
+
+  if (currentIndex >= cards.length) {
+    loadMoreBtn.style.display = "none";
+  }
+});
+
+/* ---------- SEARCH ---------- */
 function searchContent() {
   let input = document.getElementById("searchInput").value.toLowerCase();
-  let items = document.getElementsByClassName("card");
 
-  for (let i = 0; i < items.length; i++) {
-    let text = items[i].innerText.toLowerCase();
+  let matchCount = 0;
+  cards.forEach(card => {
+    let text = card.innerText.toLowerCase();
     if (text.includes(input)) {
-      items[i].style.display = "";
+      card.style.display = "block";
+      matchCount++;
     } else {
-      items[i].style.display = "none";
+      card.style.display = "none";
+    }
+  });
+
+  // search ke time "More" button hide
+  loadMoreBtn.style.display = input ? "none" : "block";
+
+  // search clear hone par reset
+  if (!input) {
+    currentIndex = perPage;
+    cards.forEach((card, index) => {
+      card.style.display = index < perPage ? "block" : "none";
+    });
+
+    if (cards.length <= perPage) {
+      loadMoreBtn.style.display = "none";
     }
   }
 }
 </script>
+
 </body>
 </html>
 
