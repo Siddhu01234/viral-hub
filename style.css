@@ -80,9 +80,22 @@ body {
   transition: none;
 }
 
-.card:hover p {
-  color: #fff;
+/* CARD TITLE - NO LINK LOOK */
+.card p {
+  margin: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #e5e5e5;
+  text-decoration: none;
+  pointer-events: none; /* text pe hover / click band */
 }
+
+/* Anchor default blue + underline hatao */
+.card {
+  text-decoration: none;
+  color: inherit;
+}
+
 
 .card img {
   width: 100%;
